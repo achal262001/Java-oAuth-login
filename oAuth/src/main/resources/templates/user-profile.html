@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+    <style>
+        /* Simple CSS for the card */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        .card h2 {
+            margin: 10px 0;
+        }
+
+        .card p {
+            color: gray;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4285F4;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .card a:hover {
+            background-color: #357ae8;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <!-- Display user's profile picture -->
+    <img th:src="${photo}" alt="User Photo"/>
+
+    <!-- Display user's name -->
+    <h2 th:text="${name}">User Name</h2>
+
+    <!-- Display user's email -->
+    <p th:text="${email}">user@example.com</p>
+
+
+</div>
+</body>
+</html>
